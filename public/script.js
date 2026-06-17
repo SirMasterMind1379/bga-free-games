@@ -44,11 +44,11 @@
   function setTheme(theme) {
     document.documentElement.setAttribute('data-theme', theme);
     localStorage.setItem('bga-theme', theme);
-    darkToggle.checked = theme === 'dark';
+    darkToggle.textContent = theme === 'dark' ? 'Light' : 'Dark';
   }
 
   setTheme(getTheme());
-  darkToggle.addEventListener('change', function () { setTheme(this.checked ? 'dark' : 'light'); });
+  darkToggle.addEventListener('click', function () { setTheme(getTheme() === 'dark' ? 'light' : 'dark'); });
 
   // Toast notification that auto-hides after 4 seconds.
   function showToast(msg) {
