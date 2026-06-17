@@ -2,7 +2,7 @@
 
 > **Live Demo:** [https://sirmastermind1379.github.io/bga-free-games/](https://sirmastermind1379.github.io/bga-free-games/)
 
-A live web dashboard that lists **free (non-premium)** games on [BoardGameArena.com](https://boardgamearena.com), with search, genre filters, popularity stats, and an RSS feed for new additions. Currently tracks **90 verified free games**.
+A live web dashboard that lists **free (non-premium)** games on [BoardGameArena.com](https://boardgamearena.com), with search, genre filters, popularity stats, and an RSS feed for new additions. Currently tracks **883 verified free games**.
 
 ---
 
