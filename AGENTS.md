@@ -46,11 +46,16 @@ When updating the game list, always consult these sources:
 ## Backend (Node.js) Style Preferences
 - **Express modular routes**: API routes in `routes/api.js`, RSS feed in `routes/feed.js`. Server entry is `server.js` — mounts routes, starts auto-update, serves `public/` statically.
 - **Module pattern**: `require`/`module.exports`. Split into `scraper.js` (game data + heuristics), `db.js` (JSON file persistence), `updater.js` (auto-update loop), `routes/*.js`.
-- **JSON file DB**: Flat `games.json` file. Read via `fs.readFileSync`, write via `fs.writeFileSync`. Sync is safe because the dataset is small (~90 games) and writes are infrequent.
+- **JSON file DB**: Flat `games.json` file. Read via `fs.readFileSync`, write via `fs.writeFileSync`. Sync is safe because the dataset is small (~883 games) and writes are infrequent.
 - **Logging**: Console.log with bracketed prefixes like `[Update]`, `[AutoUpdate]`.
 - **Error handling**: try/catch in async functions with `.message` logging. Silent catch for non-critical failures (e.g., BGA scrape fallback).
 - **Port**: `1379` hardcoded, no env vars.
 - **const over let**: Use `const` for requires, config values, and anything not reassigned.
+
+## GitHub
+- **Usage**: `$env:GH_TOKEN = "..."` before running `gh release create`
+- **Release command**: `gh release create <tag> --title "<title>" --notes "<body>"`
+- **Push tags**: `git push origin master --tags`
 
 ## File Organization
 ```
@@ -61,12 +66,13 @@ When updating the game list, always consult these sources:
 /routes/api.js         – /api/games, /api/genres, /api/update, /api/status, /api/games/:id
 /routes/feed.js        – /rss (RSS 2.0 feed for newly discovered games)
 server.js              – Express entry point, mounts + starts everything
-scraper.js             – Curated game list (90 entries), keyword-based genre/popularity heuristics
+scraper.js             – Curated game list (883 entries), keyword-based genre/popularity heuristics
 db.js                  – JSON file DB (games.json), upsert, stats, new-games-for-RSS
 updater.js             – Background scrape-and-upsert loop (60s interval)
 docs/index.html        – Static snapshot for GitHub Pages live demo
 start.bat              – One-click Windows launcher
 games.json             – Auto-generated data store (delete to force re-scrape)
+build-docs.js          – Regenerates docs/index.html static snapshot with inline CSS/JS/data
 AGENTS.md              – This file
 ```
 
