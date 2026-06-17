@@ -1,0 +1,26 @@
+[AutoUpdate] Running initial scrape...
+[Update] Starting scrape...
+BGA Free Games app running at http://localhost:1379
+  RSS feed: http://localhost:1379/rss
+[Update] Scraped 71 free games
+[Update] DB updated: 71 total, 71 new
+[AutoUpdate] Initial: 71 games, 71 new
+[AutoUpdate] Will update every 60 seconds
+[Update] Starting scrape...
+[Update] Scraped 71 free games
+[Update] DB updated: 71 total, 0 new
+[Update] Starting scrape...
+[Update] Scraped 71 free games
+[Update] DB updated: 71 total, 0 new
+[Update] Starting scrape...
+[Update] Scraped 71 free games
+[Update] DB updated: 71 total, 0 new
+[Update] Starting scrape...
+[Update] Scraped 71 free games
+[Update] DB updated: 71 total, 0 new
+[Update] Starting scrape...
+[Update] Scraped 71 free games
+[Update] DB updated: 71 total, 0 new
+[Update] Starting scrape...
+[Update] Scraped 71 free games
+[Update] DB updated: 71 total, 0 new

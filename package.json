@@ -1,0 +1,14 @@
+{
+  "name": "bga-free-games",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Shows non-premium (free) games from BoardGameArena",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "axios": "^1.7.0",
+    "cheerio": "^1.0.0"
+  }
+}

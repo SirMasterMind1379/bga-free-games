@@ -1,0 +1,930 @@
+{
+  "games": [
+    {
+      "name": "6 nimmt!",
+      "url": "/gamepanel?game=6nimmt",
+      "players": "2-10",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 80,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Abandon All Artichokes",
+      "url": "/gamepanel?game=abandonallartichokes",
+      "players": "2-4",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Alhambra",
+      "url": "/gamepanel?game=alhambra",
+      "players": "2-6",
+      "genres": [
+        "Strategy"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Altered",
+      "url": "/gamepanel?game=altered",
+      "players": "2-4",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Backgammon",
+      "url": "/gamepanel?game=backgammon",
+      "players": "2",
+      "genres": [
+        "Abstract"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 80,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Bandido",
+      "url": "/gamepanel?game=bandido",
+      "players": "1-4",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 60,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "BANG!",
+      "url": "/gamepanel?game=bang",
+      "players": "4-7",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 72,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Battleships Pencil & Paper",
+      "url": "/gamepanel?game=battleship",
+      "players": "2",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 80,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Belote",
+      "url": "/gamepanel?game=belote",
+      "players": "4",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Bubblee Pop",
+      "url": "/gamepanel?game=bubbleepop",
+      "players": "2-4",
+      "genres": [
+        "Family",
+        "Dice"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Burgle Bros.",
+      "url": "/gamepanel?game=burglebros",
+      "players": "1-4",
+      "genres": [
+        "Thematic"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 60,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "The Castles of Burgundy",
+      "url": "/gamepanel?game=thecastlesofburgundy",
+      "players": "2-4",
+      "genres": [
+        "Strategy"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 88,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Chakra",
+      "url": "/gamepanel?game=chakra",
+      "players": "2-4",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Checkers",
+      "url": "/gamepanel?game=checkers",
+      "players": "2",
+      "genres": [
+        "Abstract"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Chess",
+      "url": "/gamepanel?game=chess",
+      "players": "2",
+      "genres": [
+        "Abstract"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 80,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Coinche",
+      "url": "/gamepanel?game=coinche",
+      "players": "4",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Coloretto",
+      "url": "/gamepanel?game=coloretto",
+      "players": "2-5",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 72,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Color Pop",
+      "url": "/gamepanel?game=colorpop",
+      "players": "2-4",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Connect Four",
+      "url": "/gamepanel?game=connectfour",
+      "players": "2",
+      "genres": [
+        "Abstract"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 80,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "The Crew",
+      "url": "/gamepanel?game=thecrew",
+      "players": "2-4",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 72,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "The Crew: Mission Deep Sea",
+      "url": "/gamepanel?game=thecrewmissiondeepsea",
+      "players": "2-4",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 72,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Cribbage",
+      "url": "/gamepanel?game=cribbage",
+      "players": "2-3",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 80,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Daybreak",
+      "url": "/gamepanel?game=daybreak",
+      "players": "1-4",
+      "genres": [
+        "Thematic"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 60,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Dice Forge",
+      "url": "/gamepanel?game=diceforge",
+      "players": "2-4",
+      "genres": [
+        "Dice"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 72,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Dragonheart",
+      "url": "/gamepanel?game=dragonheart",
+      "players": "2-4",
+      "genres": [
+        "Abstract"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Flip 7",
+      "url": "/gamepanel?game=flip7",
+      "players": "2-4",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 60,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Fluxx",
+      "url": "/gamepanel?game=fluxx",
+      "players": "2-6",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 60,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "French Tarot",
+      "url": "/gamepanel?game=frenchtarot",
+      "players": "2-5",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Gomoku",
+      "url": "/gamepanel?game=gomoku",
+      "players": "2",
+      "genres": [
+        "Abstract"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Hearts",
+      "url": "/gamepanel?game=hearts",
+      "players": "4",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 80,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Hive",
+      "url": "/gamepanel?game=hive",
+      "players": "2",
+      "genres": [
+        "Abstract"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 72,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Innovation",
+      "url": "/gamepanel?game=innovation",
+      "players": "2-4",
+      "genres": [
+        "Strategy"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 72,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Just Desserts",
+      "url": "/gamepanel?game=justdesserts",
+      "players": "2-5",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Kingdom Builder",
+      "url": "/gamepanel?game=kingdombuilder",
+      "players": "2-4",
+      "genres": [
+        "Strategy"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 72,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Koi-Koi",
+      "url": "/gamepanel?game=koikoi",
+      "players": "2",
+      "genres": [
+        "Abstract"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Loco Momo",
+      "url": "/gamepanel?game=locomomo",
+      "players": "2-4",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Lost Ruins of Arnak",
+      "url": "/gamepanel?game=lostruinsofarnak",
+      "players": "1-4",
+      "genres": [
+        "Thematic"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 72,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Luxor",
+      "url": "/gamepanel?game=luxor",
+      "players": "2-4",
+      "genres": [
+        "Strategy"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Martian Dice",
+      "url": "/gamepanel?game=martiandice",
+      "players": "2-4",
+      "genres": [
+        "Dice"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 60,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Memoir '44",
+      "url": "/gamepanel?game=memoir44",
+      "players": "2",
+      "genres": [
+        "Thematic"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "No Thanks!",
+      "url": "/gamepanel?game=nothanks",
+      "players": "3-5",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 72,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Oh Hell!",
+      "url": "/gamepanel?game=ohhell",
+      "players": "3-6",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Pickomino",
+      "url": "/gamepanel?game=pickomino",
+      "players": "2-7",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Piraten kapern",
+      "url": "/gamepanel?game=piratenkapern",
+      "players": "2-5",
+      "genres": [
+        "Dice"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 60,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Planet Unknown",
+      "url": "/gamepanel?game=planetunknown",
+      "players": "1-6",
+      "genres": [
+        "Strategy"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 60,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Puerto Rico",
+      "url": "/gamepanel?game=puertorico",
+      "players": "2-5",
+      "genres": [
+        "Strategy"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 88,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Quarto",
+      "url": "/gamepanel?game=quarto",
+      "players": "2",
+      "genres": [
+        "Abstract"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Quoridor",
+      "url": "/gamepanel?game=quoridor",
+      "players": "2-4",
+      "genres": [
+        "Abstract"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Race for the Galaxy",
+      "url": "/gamepanel?game=raceforthegalaxy",
+      "players": "2-4",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 88,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Regicide",
+      "url": "/gamepanel?game=regicide",
+      "players": "1-4",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 60,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Reversi",
+      "url": "/gamepanel?game=reversi",
+      "players": "2",
+      "genres": [
+        "Abstract"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Rummy",
+      "url": "/gamepanel?game=rummy",
+      "players": "2-4",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 80,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Saboteur",
+      "url": "/gamepanel?game=saboteur",
+      "players": "3-10",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 72,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Saint Petersburg",
+      "url": "/gamepanel?game=saintpetersburg",
+      "players": "2-4",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Santorini",
+      "url": "/gamepanel?game=santorini",
+      "players": "2-4",
+      "genres": [
+        "Abstract"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 72,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Seasons",
+      "url": "/gamepanel?game=seasons",
+      "players": "2-4",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 88,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Shifting Stones",
+      "url": "/gamepanel?game=shiftingstones",
+      "players": "2-4",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Skull",
+      "url": "/gamepanel?game=skull",
+      "players": "3-6",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Solo",
+      "url": "/gamepanel?game=solo",
+      "players": "2-4",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 80,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Spot it",
+      "url": "/gamepanel?game=spotit",
+      "players": "2-8",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Stone Age",
+      "url": "/gamepanel?game=stoneage",
+      "players": "2-4",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 88,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Targi",
+      "url": "/gamepanel?game=targi",
+      "players": "2",
+      "genres": [
+        "Strategy"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 60,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Through the Ages",
+      "url": "/gamepanel?game=throughtheages",
+      "players": "2-4",
+      "genres": [
+        "Strategy"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 88,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Thurn and Taxis",
+      "url": "/gamepanel?game=thurnandtaxis",
+      "players": "2-4",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Tock",
+      "url": "/gamepanel?game=tock",
+      "players": "2-4",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Tranquility",
+      "url": "/gamepanel?game=tranquility",
+      "players": "1-5",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Tzolk'in",
+      "url": "/gamepanel?game=tzolkin",
+      "players": "2-4",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "The Voyages of Marco Polo",
+      "url": "/gamepanel?game=thevoyagesofmarcopolo",
+      "players": "2-4",
+      "genres": [
+        "Strategy"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 65,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "War Chest",
+      "url": "/gamepanel?game=warchest",
+      "players": "2-4",
+      "genres": [
+        "Strategy"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 60,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Wizard",
+      "url": "/gamepanel?game=wizard",
+      "players": "3-6",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 72,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    },
+    {
+      "name": "Yahtzee",
+      "url": "/gamepanel?game=yahtzee",
+      "players": "1-4",
+      "genres": [
+        "Dice"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 88,
+      "discoveredAt": "2026-06-17T19:27:33.211Z"
+    }
+  ],
+  "lastUpdated": "2026-06-17T19:33:33.840Z",
+  "updateCount": 7
+}

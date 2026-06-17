@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BGA Free Games</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="alternate" type="application/rss+xml" title="BGA Free Games - New Additions" href="/rss">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <h1 class="site-title">BGA Free Games</h1>
+      <div class="header-actions">
+        <a href="/rss" class="rss-link" title="RSS Feed">RSS Feed</a>
+        <label class="toggle-label">
+          <input type="checkbox" id="darkToggle" aria-label="Toggle dark mode">
+          <span class="toggle-text">Dark</span>
+        </label>
+      </div>
+    </div>
+    <div class="header-status">
+      <span id="gameCount">Loading...</span>
+      <span class="sep">|</span>
+      <span id="genreCount"></span>
+      <span class="sep">|</span>
+      <span id="lastUpdated">—</span>
+      <button id="updateBtn" class="btn-update">Check for Updates</button>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search free games..." aria-label="Search games">
+      <select id="genreFilter" aria-label="Filter by genre">
+        <option value="">All Genres</option>
+      </select>
+      <select id="sortSelect" aria-label="Sort games">
+        <option value="name">Name</option>
+        <option value="popularity">Popularity</option>
+        <option value="players">Players</option>
+      </select>
+    </div>
+
+    <div id="loading" class="loading">Loading games...</div>
+    <div id="error" class="error hidden"></div>
+    <div id="gameGrid" class="game-grid"></div>
+  </main>
+
+  <footer class="footer">
+    <p>Data sourced from <a href="https://boardgamearena.com" target="_blank" rel="noopener">BoardGameArena</a>. Not affiliated with BGA.</p>
+  </footer>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <script src="/script.js"></script>
+</body>
+</html>
