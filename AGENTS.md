@@ -76,6 +76,23 @@ build-docs.js          – Regenerates docs/index.html static snapshot with inli
 AGENTS.md              – This file
 ```
 
+## Future Considerations (Feature Ideas)
+These are common feature requests / enhancements to consider for release notes and README:
+
+- **Per-game detail page**: Click a game card to see description, BGG rating, links to rules/how-to-play videos
+- **BGG API integration**: With a registered token, fetch accurate genres/categories/ratings/playtime per game
+- **Player count filter**: Filter games by exact player count (e.g., "show me 2-player games")
+- **Collection/user system**: Let users mark games as "played", "want to play", "favorites"
+- **Playtime info**: Show approximate play duration per game (from BGG or manual data)
+- **Expansion tracking**: Flag which games have expansions available (free vs premium)
+- **Mobile app / PWA**: Add manifest and service worker for installable mobile experience
+- **Multi-language support**: BGA supports many languages; show which languages each game supports
+- **Sort by recently added**: Sort games by discovery date (newest first)
+- **Stats dashboard**: Charts showing genre distribution, popularity histograms, etc.
+- **Export / share**: Copy filtered list as text, CSV export of current view
+- **Premium indicator diff**: Track games that recently switched between free and premium
+- **Notifications**: Desktop/browser push when new free games are detected
+
 ## Conventions
 - 2-space indentation throughout all files.
 - HTML comments (`<!-- ... -->`) for section annotations.
