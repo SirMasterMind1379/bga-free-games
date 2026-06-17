@@ -1,3 +1,25 @@
+/* script.js – Client-side app logic
+ *
+ * This file runs in the browser and handles:
+ * - Fetching game data from the /api endpoints
+ * - Rendering game cards into the grid
+ * - Searching, filtering by genre, and sorting
+ * - Dark mode toggle with localStorage persistence
+ * - Manual update button triggering /api/update
+ * - Toast notifications for update results
+ *
+ * Architecture decisions:
+ * - Wrapped in an IIFE to avoid polluting the global scope.
+ * - Games are fetched on every filter/sort change (no client-side
+ *   caching beyond the current render) because the dataset is small.
+ * - DOM elements are created with document.createElement rather than
+ *   innerHTML assignments to avoid XSS vectors from game names.
+ * - Search input uses a 200ms debounce to avoid excessive fetch calls
+ *   while typing.
+ * - Dark mode preference is saved to localStorage so it persists
+ *   across sessions — no server-side state needed.
+ */
+
 (function () {
   'use strict';
 
@@ -28,6 +50,7 @@
   setTheme(getTheme());
   darkToggle.addEventListener('change', function () { setTheme(this.checked ? 'dark' : 'light'); });
 
+  // Toast notification that auto-hides after 4 seconds.
   function showToast(msg) {
     toast.textContent = msg;
     toast.classList.remove('hidden');
@@ -38,6 +61,7 @@
   function showError(msg) { error.textContent = msg; error.classList.remove('hidden'); loading.classList.add('hidden'); }
   function hideError() { error.classList.add('hidden'); }
 
+  // Fetch games from API with current search/filter/sort parameters.
   async function fetchGames() {
     const params = new URLSearchParams();
     const q = searchInput.value;
@@ -56,6 +80,7 @@
     } catch (err) { showError('Could not load games. ' + err.message); throw err; }
   }
 
+  // Fetch available genres for the filter dropdown.
   async function fetchGenres() {
     try {
       const resp = await fetch('/api/genres');
@@ -78,6 +103,7 @@
     genreFilter.value = current;
   }
 
+  // Update the status bar with game count, genre count, last-updated time.
   async function fetchStatus() {
     try {
       const resp = await fetch('/api/status');
@@ -92,6 +118,9 @@
     } catch {}
   }
 
+  // Render game cards using DOM API (safe: no innerHTML for names/links).
+  // Each card shows: name (linked to BGA), player count, genre pills,
+  // popularity bar, and a "Free" badge.
   function renderGames(games) {
     gameGrid.innerHTML = '';
     if (games.length === 0) {
@@ -103,6 +132,7 @@
       const card = document.createElement('div');
       card.className = 'game-card';
 
+      // Game name as a link to BGA gamepanel
       const nameEl = document.createElement('div');
       nameEl.className = 'game-card-name';
       const nameLink = document.createElement('a');
@@ -113,6 +143,7 @@
       nameEl.appendChild(nameLink);
       card.appendChild(nameEl);
 
+      // Player count metadata
       const metaEl = document.createElement('div');
       metaEl.className = 'game-card-meta';
       if (g.players) {
@@ -122,6 +153,7 @@
       }
       card.appendChild(metaEl);
 
+      // Genre pills
       if (g.genres && g.genres.length > 0) {
         const genresEl = document.createElement('div');
         genresEl.className = 'game-card-genres';
@@ -134,6 +166,7 @@
         card.appendChild(genresEl);
       }
 
+      // Popularity bar (width = popularity percentage)
       if (g.popularity) {
         const row = document.createElement('div');
         row.className = 'stat-row';
@@ -149,6 +182,7 @@
         card.appendChild(na);
       }
 
+      // Free badge at bottom of card
       const badge = document.createElement('div');
       badge.className = 'free-badge';
       badge.textContent = 'Free';
@@ -163,10 +197,18 @@
     return function () { clearTimeout(timer); timer = setTimeout(fn, ms); };
   }
 
+  // Debounce utility: delays execution until `ms` ms of inactivity.
+  // Used on the search input to avoid firing a fetch on every keystroke.
+  function debounce(fn, ms) {
+    let timer;
+    return function () { clearTimeout(timer); timer = setTimeout(fn, ms); };
+  }
+
   searchInput.addEventListener('input', debounce(loadGames, 200));
   sortSelect.addEventListener('change', loadGames);
   genreFilter.addEventListener('change', loadGames);
 
+  // Load games, update status bar, hide loading indicator.
   async function loadGames() {
     loading.classList.remove('hidden');
     hideError();
@@ -178,6 +220,7 @@
     loading.classList.add('hidden');
   }
 
+  // Manual update button – triggers /api/update then refreshes.
   updateBtn.addEventListener('click', async function () {
     updateBtn.disabled = true;
     updateBtn.textContent = 'Updating...';
@@ -194,6 +237,7 @@
     updateBtn.textContent = 'Check for Updates';
   });
 
+  // Initial load
   fetchGenres();
   loadGames();
 })();

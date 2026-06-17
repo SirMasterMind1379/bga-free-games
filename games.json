@@ -10,8 +10,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 80,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 82,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Abandon All Artichokes",
@@ -23,8 +23,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Alhambra",
@@ -36,8 +36,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 74,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Altered",
@@ -49,8 +49,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Backgammon",
@@ -62,8 +62,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 80,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 82,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Bandido",
@@ -76,7 +76,7 @@
       "image": "",
       "complexity": 0,
       "popularity": 60,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "BANG!",
@@ -88,8 +88,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 72,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 78,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Battleships Pencil & Paper",
@@ -101,8 +101,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 80,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 82,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Belote",
@@ -114,8 +114,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 74,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Bubblee Pop",
@@ -128,8 +128,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Burgle Bros.",
@@ -142,11 +142,11 @@
       "image": "",
       "complexity": 0,
       "popularity": 60,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "The Castles of Burgundy",
-      "url": "/gamepanel?game=thecastlesofburgundy",
+      "url": "/gamepanel?game=castlesofburgundy",
       "players": "2-4",
       "genres": [
         "Strategy"
@@ -155,7 +155,7 @@
       "image": "",
       "complexity": 0,
       "popularity": 88,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Chakra",
@@ -167,8 +167,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Checkers",
@@ -180,8 +180,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 74,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Chess",
@@ -193,8 +193,21 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 80,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 82,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
+    },
+    {
+      "name": "Canasta",
+      "url": "/gamepanel?game=canasta",
+      "players": "2-6",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 68,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Coinche",
@@ -206,21 +219,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
-    },
-    {
-      "name": "CuBirds",
-      "url": "/gamepanel?game=cubirds",
-      "players": "2-4",
-      "genres": [
-        "Family"
-      ],
-      "isPremium": false,
-      "image": "",
-      "complexity": 0,
-      "popularity": 88,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Coloretto",
@@ -232,8 +232,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 72,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 78,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Color Pop",
@@ -245,8 +245,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Connect Four",
@@ -258,8 +258,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 80,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 82,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "The Crew",
@@ -271,8 +271,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 72,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 78,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "The Crew: Mission Deep Sea",
@@ -284,8 +284,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 72,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 78,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Cribbage",
@@ -297,8 +297,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 80,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 82,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Daybreak",
@@ -311,7 +311,7 @@
       "image": "",
       "complexity": 0,
       "popularity": 60,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Dice Forge",
@@ -323,8 +323,21 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 72,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 78,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
+    },
+    {
+      "name": "Dominoes",
+      "url": "/gamepanel?game=dominoes",
+      "players": "1-4",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 74,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Dragonheart",
@@ -336,8 +349,34 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
+    },
+    {
+      "name": "Euchre",
+      "url": "/gamepanel?game=euchre",
+      "players": "1-4",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 68,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
+    },
+    {
+      "name": "Farkle",
+      "url": "/gamepanel?game=farkle",
+      "players": "1-12",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 74,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Flip 7",
@@ -350,7 +389,7 @@
       "image": "",
       "complexity": 0,
       "popularity": 60,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Fluxx",
@@ -363,7 +402,7 @@
       "image": "",
       "complexity": 0,
       "popularity": 60,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "French Tarot",
@@ -375,8 +414,21 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 74,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
+    },
+    {
+      "name": "Gin Rummy",
+      "url": "/gamepanel?game=ginrummy",
+      "players": "1-2",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 82,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Go Goa",
@@ -388,8 +440,21 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 50,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 60,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
+    },
+    {
+      "name": "Golf",
+      "url": "/gamepanel?game=golf",
+      "players": "2-8",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 74,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Gomoku",
@@ -401,8 +466,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 74,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Happy City",
@@ -414,8 +479,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Hearts",
@@ -427,8 +492,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 80,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 82,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Hive",
@@ -440,8 +505,21 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 72,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 78,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
+    },
+    {
+      "name": "Hand and Foot",
+      "url": "/gamepanel?game=handandfoot",
+      "players": "2-12",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 78,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Innovation",
@@ -453,8 +531,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 72,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 78,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Just Desserts",
@@ -466,8 +544,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Kingdom Builder",
@@ -479,8 +557,21 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 72,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 78,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
+    },
+    {
+      "name": "Kings in the Corner",
+      "url": "/gamepanel?game=kingsinthecorner",
+      "players": "1-6",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 68,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Koi-Koi",
@@ -492,8 +583,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Kumata",
@@ -505,8 +596,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 50,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 60,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Lewis & Clark",
@@ -518,8 +609,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Loco Momo",
@@ -531,8 +622,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Lost Ruins of Arnak",
@@ -544,8 +635,21 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 72,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 78,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
+    },
+    {
+      "name": "Ludo",
+      "url": "/gamepanel?game=ludo",
+      "players": "2-4",
+      "genres": [
+        "Family"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 68,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Luxor",
@@ -557,8 +661,21 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
+    },
+    {
+      "name": "Machiavelli",
+      "url": "/gamepanel?game=machiavelli",
+      "players": "2-5",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 78,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Martian Dice",
@@ -571,7 +688,7 @@
       "image": "",
       "complexity": 0,
       "popularity": 60,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Mini Rogue",
@@ -584,7 +701,7 @@
       "image": "",
       "complexity": 0,
       "popularity": 60,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Memoir '44",
@@ -596,8 +713,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "No Thanks!",
@@ -609,8 +726,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 72,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 78,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Oh Hell!",
@@ -622,8 +739,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Pickomino",
@@ -635,8 +752,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Pentaquest",
@@ -648,8 +765,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 50,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 60,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Piraten kapern",
@@ -662,7 +779,7 @@
       "image": "",
       "complexity": 0,
       "popularity": 60,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Planet Unknown",
@@ -675,7 +792,7 @@
       "image": "",
       "complexity": 0,
       "popularity": 60,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Puerto Rico",
@@ -688,7 +805,7 @@
       "image": "",
       "complexity": 0,
       "popularity": 88,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Quarto",
@@ -700,8 +817,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 74,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Quoridor",
@@ -713,8 +830,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 74,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Race for the Galaxy",
@@ -727,7 +844,7 @@
       "image": "",
       "complexity": 0,
       "popularity": 88,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Red Notice",
@@ -739,8 +856,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 50,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 60,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Regicide",
@@ -753,7 +870,7 @@
       "image": "",
       "complexity": 0,
       "popularity": 60,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Reversi",
@@ -765,8 +882,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 74,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Rummy",
@@ -778,8 +895,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 80,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 82,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Saboteur",
@@ -791,8 +908,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 72,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 78,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Saint Petersburg",
@@ -804,8 +921,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Santorini",
@@ -817,8 +934,21 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 72,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 78,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
+    },
+    {
+      "name": "Scopa",
+      "url": "/gamepanel?game=scopa",
+      "players": "2-6",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 74,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Seasons",
@@ -831,7 +961,7 @@
       "image": "",
       "complexity": 0,
       "popularity": 88,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Shifting Stones",
@@ -843,8 +973,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Skull",
@@ -856,8 +986,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Solo",
@@ -869,8 +999,21 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 80,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 82,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
+    },
+    {
+      "name": "Spite and Malice",
+      "url": "/gamepanel?game=spiteandmalice",
+      "players": "1-4",
+      "genres": [
+        "Card"
+      ],
+      "isPremium": false,
+      "image": "",
+      "complexity": 0,
+      "popularity": 78,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Spot it",
@@ -882,8 +1025,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Stone Age",
@@ -896,7 +1039,7 @@
       "image": "",
       "complexity": 0,
       "popularity": 88,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Targi",
@@ -909,7 +1052,7 @@
       "image": "",
       "complexity": 0,
       "popularity": 60,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Through the Ages",
@@ -922,7 +1065,7 @@
       "image": "",
       "complexity": 0,
       "popularity": 88,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Thurn and Taxis",
@@ -934,8 +1077,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Tock",
@@ -947,8 +1090,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 74,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Tranquility",
@@ -960,8 +1103,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Tzolk'in",
@@ -973,8 +1116,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "The Voyages of Marco Polo",
@@ -986,8 +1129,8 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 65,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 70,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "War Chest",
@@ -1000,7 +1143,7 @@
       "image": "",
       "complexity": 0,
       "popularity": 60,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Wizard",
@@ -1012,23 +1155,23 @@
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 72,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 78,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     },
     {
       "name": "Yahtzee",
-      "url": "/gamepanel?game=yahtzee",
-      "players": "1-4",
+      "url": "/gamepanel?game=yatzy",
+      "players": "1-10",
       "genres": [
         "Dice"
       ],
       "isPremium": false,
       "image": "",
       "complexity": 0,
-      "popularity": 88,
-      "discoveredAt": "2026-06-17T19:36:15.727Z"
+      "popularity": 82,
+      "discoveredAt": "2026-06-17T20:38:49.197Z"
     }
   ],
-  "lastUpdated": "2026-06-17T19:44:19.660Z",
-  "updateCount": 10
+  "lastUpdated": "2026-06-17T20:43:50.099Z",
+  "updateCount": 7
 }

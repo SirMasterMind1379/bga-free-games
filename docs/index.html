@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BGA Free Games (Static Demo)</title>
+<style>
+/* style.css – Boxy dark beige/red theme with dark mode support
+ *
+ * Design rationale:
+ * - Boxy aesthetic: border-radius: 0 !important on everything for a sharp,
+ *   no-nonsense look reminiscent of old-school web interfaces.
+ * - Color palette: Dark beige (#D4C5A0) background with royal red (#B22222)
+ *   and burgundy (#800020) accents. The dark variant inverts the background
+ *   to near-black while keeping the red accents for consistency.
+ * - Typography: Georgia serif for headings (authoritative, classic feel),
+ *   system / Segoe UI sans-serif for body text (readability).
+ * - All colors are defined as CSS custom properties so the dark mode toggle
+ *   only needs to switch the data-theme attribute on <html>.
+ * - The .game-card uses a subtle border + hover shadow effect instead of
+ *   rounding corners, maintaining the boxy constraint.
+ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  border-radius: 0 !important;
+  margin: 0;
+  padding: 0;
+}
+
+/* Light theme (default) – warm beige background, red accents */
+:root {
+  --bg: #D4C5A0;
+  --bg-alt: #C8B894;
+  --bg-card: #C8B894;
+  --fg: #1A1410;
+  --fg-muted: #5A4A3A;
+  --accent: #B22222;
+  --accent-hover: #8B0000;
+  --accent-secondary: #800020;
+  --border: #B0A080;
+  --header-bg: #800020;
+  --header-fg: #F0E8D8;
+  --btn-bg: #B22222;
+  --btn-fg: #F0E8D8;
+  --btn-hover: #8B0000;
+  --input-bg: #E8DCC4;
+  --input-border: #B0A080;
+  --toast-bg: #800020;
+  --toast-fg: #F0E8D8;
+  --link: #B22222;
+  --link-hover: #8B0000;
+  --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-heading: Georgia, 'Times New Roman', Times, serif;
+  --shadow: 0 2px 4px rgba(0,0,0,0.1);
+  --bar-bg: #B0A080;
+  --bar-fill: #800020;
+  --badge-bg: #800020;
+  --badge-fg: #F0E8D8;
+  --genre-pill-bg: #C8B894;
+  --genre-pill-fg: #1A1410;
+  --genre-pill-border: #B0A080;
+}
+
+/* Dark theme overrides – switch via [data-theme="dark"] on <html>          */
+/* Backgrounds go near-black, red accents shift slightly brighter for       */
+/* contrast against the dark backdrop. All other properties stay the same.  */
+[data-theme="dark"] {
+  --bg: #1A1510;
+  --bg-alt: #241E16;
+  --bg-card: #2A2418;
+  --fg: #E8E0D0;
+  --fg-muted: #A89880;
+  --accent: #C41E3A;
+  --accent-hover: #E02040;
+  --accent-secondary: #900020;
+  --border: #3A3020;
+  --header-bg: #0D0A08;
+  --header-fg: #E8E0D0;
+  --btn-bg: #B22222;
+  --btn-fg: #F0E8D8;
+  --btn-hover: #C41E3A;
+  --input-bg: #2A2418;
+  --input-border: #4A3A28;
+  --toast-bg: #900020;
+  --toast-fg: #F0E8D8;
+  --link: #C41E3A;
+  --link-hover: #E02040;
+  --shadow: 0 2px 4px rgba(0,0,0,0.3);
+  --bar-bg: #3A3020;
+  --bar-fill: #900020;
+  --badge-bg: #900020;
+  --badge-fg: #F0E8D8;
+  --genre-pill-bg: #2A2418;
+  --genre-pill-fg: #E8E0D0;
+  --genre-pill-border: #4A3A28;
+}
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--fg);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
+}
+
+a { color: var(--link); text-decoration: none; }
+a:hover { color: var(--link-hover); text-decoration: underline; }
+
+.header {
+  background: var(--header-bg);
+  color: var(--header-fg);
+  padding: 1rem 1.5rem 0.75rem;
+  border-bottom: 3px solid var(--accent-secondary);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.site-title {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.header-actions { display: flex; align-items: center; gap: 1rem; }
+
+.rss-link {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  background: var(--accent);
+  color: #F0E8D8;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 1px solid var(--accent-secondary);
+}
+.rss-link:hover { background: var(--accent-hover); color: #F0E8D8; text-decoration: none; }
+
+.toggle-label { display: flex; align-items: center; gap: 0.4rem; cursor: pointer; font-size: 0.85rem; user-select: none; }
+.toggle-label input[type="checkbox"] { width: 1rem; height: 1rem; cursor: pointer; accent-color: var(--accent); }
+.toggle-text { font-family: var(--font-body); font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.8rem; }
+
+.header-status { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.9; flex-wrap: wrap; }
+.sep { opacity: 0.5; }
+
+.btn-update {
+  padding: 0.3rem 0.7rem;
+  background: var(--accent);
+  color: #F0E8D8;
+  border: 1px solid var(--accent-secondary);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  transition: background 0.15s;
+}
+.btn-update:hover { background: var(--accent-hover); }
+.btn-update:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.main { flex: 1; max-width: 1200px; width: 100%; margin: 0 auto; padding: 1.5rem; }
+
+.search-bar { display: flex; gap: 0.75rem; margin-bottom: 1.5rem; flex-wrap: wrap; }
+.search-bar input, .search-bar select { padding: 0.6rem 0.75rem; background: var(--input-bg); color: var(--fg); border: 1px solid var(--input-border); font-family: var(--font-body); font-size: 0.95rem; }
+.search-bar input { flex: 1; min-width: 200px; }
+.search-bar select { min-width: 140px; }
+.search-bar input:focus, .search-bar select:focus { outline: none; border-color: var(--accent); }
+
+.loading { text-align: center; padding: 3rem; font-size: 1.1rem; color: var(--fg-muted); }
+
+.error { padding: 1rem; background: var(--accent-secondary); color: #F0E8D8; border: 1px solid var(--accent); margin-bottom: 1rem; font-weight: 600; }
+.hidden { display: none !important; }
+
+.game-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 1rem; }
+
+.game-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+.game-card:hover { box-shadow: var(--shadow); border-color: var(--accent); }
+
+.game-card-name { font-family: var(--font-heading); font-size: 1.05rem; font-weight: 700; margin-bottom: 0.4rem; color: var(--fg); line-height: 1.3; }
+.game-card-name a { color: inherit; }
+.game-card-name a:hover { color: var(--accent); text-decoration: none; }
+
+.game-card-meta { font-size: 0.85rem; color: var(--fg-muted); margin-bottom: 0.5rem; }
+.game-card-meta span { display: inline-block; margin-right: 0.75rem; }
+
+.game-card-genres { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.6rem; }
+
+.genre-pill {
+  display: inline-block;
+  padding: 0.1rem 0.45rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  background: var(--genre-pill-bg);
+  color: var(--genre-pill-fg);
+  border: 1px solid var(--genre-pill-border);
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  margin-bottom: 0.35rem;
+}
+
+.stat-label {
+  min-width: 4.5rem;
+  color: var(--fg-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 0.7rem;
+}
+
+.stat-bar { flex: 1; height: 8px; background: var(--bar-bg); position: relative; }
+.stat-bar-fill { height: 100%; background: var(--bar-fill); transition: width 0.3s; }
+.stat-value { min-width: 2.2rem; text-align: right; font-weight: 700; color: var(--fg); font-size: 0.72rem; }
+
+.free-badge {
+  display: inline-block;
+  margin-top: auto;
+  padding: 0.2rem 0.5rem;
+  background: var(--badge-bg);
+  color: var(--badge-fg);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  align-self: flex-start;
+}
+
+.no-stats-msg { font-size: 0.78rem; color: var(--fg-muted); font-style: italic; margin-bottom: 0.5rem; }
+
+.footer { text-align: center; padding: 1.5rem; font-size: 0.85rem; color: var(--fg-muted); border-top: 1px solid var(--border); }
+
+.toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--toast-bg);
+  color: var(--toast-fg);
+  border: 1px solid var(--accent);
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 1000;
+  max-width: 350px;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 600px) {
+  .header-inner { flex-direction: column; align-items: flex-start; }
+  .game-grid { grid-template-columns: 1fr; }
+  .header-status { flex-direction: column; align-items: flex-start; }
+  .sep { display: none; }
+  .search-bar { flex-direction: column; }
+  .search-bar select { min-width: auto; }
+  .stat-label { min-width: 3.5rem; }
+}
+
+</style>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23800020' rx='0'/%3E%3Ctext x='16' y='22' font-family='Georgia,serif' font-size='16' font-weight='bold' fill='%23F0E8D8' text-anchor='middle'%3EBGA%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+<header class="header">
+<div class="header-inner">
+<h1 class="site-title">BGA Free Games</h1>
+<div class="header-actions">
+<a href="https://github.com/SirMasterMind1379/bga-free-games" class="rss-link" title="GitHub Repo" target="_blank" rel="noopener">GitHub</a>
+<label class="toggle-label">
+<input type="checkbox" id="darkToggle" aria-label="Toggle dark mode">
+<span class="toggle-text">Dark</span>
+</label>
+</div>
+</div>
+<div class="header-status">
+<span id="gameCount">90 free games</span>
+<span class="sep">|</span>
+<span id="genreCount">6 genres</span>
+<span class="sep">|</span>
+<span id="lastUpdated">Snapshot: 2026-06-17 16:43:46 UTC</span>
+</div>
+</header>
+<main class="main">
+<div class="search-bar">
+<input type="text" id="searchInput" placeholder="Search free games..." aria-label="Search games">
+<select id="genreFilter" aria-label="Filter by genre">
+<option value="">All Genres</option>
+</select>
+<select id="sortSelect" aria-label="Sort games">
+<option value="name">Name</option>
+<option value="popularity">Popularity</option>
+<option value="players">Players</option>
+</select>
+</div>
+<div id="gameGrid" class="game-grid"></div>
+</main>
+<footer class="footer">
+<p>Static snapshot — <a href="https://boardgamearena.com" target="_blank" rel="noopener">BoardGameArena</a>. Not affiliated with BGA.</p>
+</footer>
+<div id="toast" class="toast hidden"></div>
+<script>
+var GAMES_DATA = [{"name":"6 nimmt!","url":"/gamepanel?game=sechsnimmt","players":"2-10","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":82,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Abandon All Artichokes","url":"/gamepanel?game=abandonallartichokes","players":"2-4","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Alhambra","url":"/gamepanel?game=alhambra","players":"2-6","genres":["Strategy"],"isPremium":false,"image":"","complexity":0,"popularity":74,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Altered","url":"/gamepanel?game=altered","players":"2-4","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Backgammon","url":"/gamepanel?game=backgammon","players":"2","genres":["Thematic"],"isPremium":false,"image":"","complexity":0,"popularity":82,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Bandido","url":"/gamepanel?game=bandido","players":"1-4","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":60,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"BANG!","url":"/gamepanel?game=bang","players":"4-7","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":78,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Battleships Pencil & Paper","url":"/gamepanel?game=battleship","players":"2","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":82,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Belote","url":"/gamepanel?game=belote","players":"4","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":74,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Bubblee Pop","url":"/gamepanel?game=bubbleepop","players":"2-4","genres":["Family","Dice"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Burgle Bros.","url":"/gamepanel?game=burglebros","players":"1-4","genres":["Thematic"],"isPremium":false,"image":"","complexity":0,"popularity":60,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Canasta","url":"/gamepanel?game=canasta","players":"2-6","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":68,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Chakra","url":"/gamepanel?game=chakra","players":"2-4","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Checkers","url":"/gamepanel?game=checkers","players":"2","genres":["Abstract"],"isPremium":false,"image":"","complexity":0,"popularity":74,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Chess","url":"/gamepanel?game=chess","players":"2","genres":["Abstract"],"isPremium":false,"image":"","complexity":0,"popularity":82,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Coinche","url":"/gamepanel?game=coinche","players":"4","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Color Pop","url":"/gamepanel?game=colorpop","players":"2-4","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Coloretto","url":"/gamepanel?game=coloretto","players":"2-5","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":78,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Connect Four","url":"/gamepanel?game=connectfour","players":"2","genres":["Abstract"],"isPremium":false,"image":"","complexity":0,"popularity":82,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Cribbage","url":"/gamepanel?game=cribbage","players":"2-3","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":82,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Daybreak","url":"/gamepanel?game=daybreak","players":"1-4","genres":["Thematic"],"isPremium":false,"image":"","complexity":0,"popularity":60,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Dice Forge","url":"/gamepanel?game=diceforge","players":"2-4","genres":["Dice"],"isPremium":false,"image":"","complexity":0,"popularity":78,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Dominoes","url":"/gamepanel?game=dominoes","players":"1-4","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":74,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Dragonheart","url":"/gamepanel?game=dragonheart","players":"2-4","genres":["Thematic"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Euchre","url":"/gamepanel?game=euchre","players":"1-4","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":68,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Farkle","url":"/gamepanel?game=farkle","players":"1-12","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":74,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Flip 7","url":"/gamepanel?game=flip7","players":"2-4","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":60,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Fluxx","url":"/gamepanel?game=fluxx","players":"2-6","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":60,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"French Tarot","url":"/gamepanel?game=frenchtarot","players":"2-5","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":74,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Gin Rummy","url":"/gamepanel?game=ginrummy","players":"1-2","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":82,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Go Goa","url":"/gamepanel?game=gogoa","players":"1-6","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":60,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Golf","url":"/gamepanel?game=golf","players":"2-8","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":74,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Gomoku","url":"/gamepanel?game=gomoku","players":"2","genres":["Abstract"],"isPremium":false,"image":"","complexity":0,"popularity":74,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Hand and Foot","url":"/gamepanel?game=handandfoot","players":"2-12","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":78,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Happy City","url":"/gamepanel?game=happycity","players":"2-4","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Hearts","url":"/gamepanel?game=hearts","players":"4","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":82,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Hive","url":"/gamepanel?game=hive","players":"2","genres":["Abstract"],"isPremium":false,"image":"","complexity":0,"popularity":78,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Innovation","url":"/gamepanel?game=innovation","players":"2-4","genres":["Strategy"],"isPremium":false,"image":"","complexity":0,"popularity":78,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Just Desserts","url":"/gamepanel?game=justdesserts","players":"2-5","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Kingdom Builder","url":"/gamepanel?game=kingdombuilder","players":"2-4","genres":["Strategy"],"isPremium":false,"image":"","complexity":0,"popularity":78,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Kings in the Corner","url":"/gamepanel?game=kingsinthecorner","players":"1-6","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":68,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Koi-Koi","url":"/gamepanel?game=koikoi","players":"2","genres":["Thematic"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Kumata","url":"/gamepanel?game=kumata","players":"2-4","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":60,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Lewis & Clark","url":"/gamepanel?game=lewisclark","players":"1-5","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Loco Momo","url":"/gamepanel?game=locomomo","players":"2-4","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Lost Ruins of Arnak","url":"/gamepanel?game=lostruinsofarnak","players":"1-4","genres":["Thematic"],"isPremium":false,"image":"","complexity":0,"popularity":78,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Ludo","url":"/gamepanel?game=ludo","players":"2-4","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":68,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Luxor","url":"/gamepanel?game=luxor","players":"2-4","genres":["Strategy"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Machiavelli","url":"/gamepanel?game=machiavelli","players":"2-5","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":78,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Martian Dice","url":"/gamepanel?game=martiandice","players":"2-4","genres":["Dice"],"isPremium":false,"image":"","complexity":0,"popularity":60,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Memoir '44","url":"/gamepanel?game=memoir44","players":"2","genres":["Thematic"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Mini Rogue","url":"/gamepanel?game=minirogue","players":"1-3","genres":["Thematic"],"isPremium":false,"image":"","complexity":0,"popularity":60,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"No Thanks!","url":"/gamepanel?game=nothanks","players":"3-5","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":78,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Oh Hell!","url":"/gamepanel?game=ohhell","players":"3-6","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Pentaquest","url":"/gamepanel?game=pentaquest","players":"1-8","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":60,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Pickomino","url":"/gamepanel?game=pickomino","players":"2-7","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Piraten kapern","url":"/gamepanel?game=piratenkapern","players":"2-5","genres":["Dice"],"isPremium":false,"image":"","complexity":0,"popularity":60,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Planet Unknown","url":"/gamepanel?game=planetunknown","players":"1-6","genres":["Strategy"],"isPremium":false,"image":"","complexity":0,"popularity":60,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Puerto Rico","url":"/gamepanel?game=puertorico","players":"2-5","genres":["Strategy"],"isPremium":false,"image":"","complexity":0,"popularity":88,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Quarto","url":"/gamepanel?game=quarto","players":"2","genres":["Abstract"],"isPremium":false,"image":"","complexity":0,"popularity":74,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Quoridor","url":"/gamepanel?game=quoridor","players":"2-4","genres":["Abstract"],"isPremium":false,"image":"","complexity":0,"popularity":74,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Race for the Galaxy","url":"/gamepanel?game=raceforthegalaxy","players":"2-4","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":88,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Red Notice","url":"/gamepanel?game=rednotice","players":"2","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":60,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Regicide","url":"/gamepanel?game=regicide","players":"1-4","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":60,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Reversi","url":"/gamepanel?game=reversi","players":"2","genres":["Abstract"],"isPremium":false,"image":"","complexity":0,"popularity":74,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Rummy","url":"/gamepanel?game=rummy","players":"2-4","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":82,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Saboteur","url":"/gamepanel?game=saboteur","players":"3-10","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":78,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Saint Petersburg","url":"/gamepanel?game=saintpetersburg","players":"2-4","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Santorini","url":"/gamepanel?game=santorini","players":"2-4","genres":["Abstract"],"isPremium":false,"image":"","complexity":0,"popularity":78,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Scopa","url":"/gamepanel?game=scopa","players":"2-6","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":74,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Seasons","url":"/gamepanel?game=seasons","players":"2-4","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":88,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Shifting Stones","url":"/gamepanel?game=shiftingstones","players":"2-4","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Skull","url":"/gamepanel?game=skull","players":"3-6","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Solo","url":"/gamepanel?game=solo","players":"2-4","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":82,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Spite and Malice","url":"/gamepanel?game=spiteandmalice","players":"1-4","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":78,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Spot it","url":"/gamepanel?game=spotit","players":"2-8","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Stone Age","url":"/gamepanel?game=stoneage","players":"2-4","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":88,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Targi","url":"/gamepanel?game=targi","players":"2","genres":["Strategy"],"isPremium":false,"image":"","complexity":0,"popularity":60,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"The Castles of Burgundy","url":"/gamepanel?game=castlesofburgundy","players":"2-4","genres":["Strategy"],"isPremium":false,"image":"","complexity":0,"popularity":88,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"The Crew","url":"/gamepanel?game=thecrew","players":"2-4","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":78,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"The Crew: Mission Deep Sea","url":"/gamepanel?game=thecrewmissiondeepsea","players":"2-4","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":78,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"The Voyages of Marco Polo","url":"/gamepanel?game=thevoyagesofmarcopolo","players":"2-4","genres":["Strategy"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Through the Ages","url":"/gamepanel?game=throughtheages","players":"2-4","genres":["Strategy"],"isPremium":false,"image":"","complexity":0,"popularity":88,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Thurn and Taxis","url":"/gamepanel?game=thurnandtaxis","players":"2-4","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Tock","url":"/gamepanel?game=tock","players":"2-4","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":74,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Tranquility","url":"/gamepanel?game=tranquility","players":"1-5","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Tzolk'in","url":"/gamepanel?game=tzolkin","players":"2-4","genres":["Family"],"isPremium":false,"image":"","complexity":0,"popularity":70,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"War Chest","url":"/gamepanel?game=warchest","players":"2-4","genres":["Strategy"],"isPremium":false,"image":"","complexity":0,"popularity":60,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Wizard","url":"/gamepanel?game=wizard","players":"3-6","genres":["Card"],"isPremium":false,"image":"","complexity":0,"popularity":78,"discoveredAt":"2026-06-17T20:38:49.197Z"},{"name":"Yahtzee","url":"/gamepanel?game=yatzy","players":"1-10","genres":["Dice"],"isPremium":false,"image":"","complexity":0,"popularity":82,"discoveredAt":"2026-06-17T20:38:49.197Z"}];
+(function(){
+'use strict';
+var searchInput = document.getElementById('searchInput');
+var sortSelect = document.getElementById('sortSelect');
+var genreFilter = document.getElementById('genreFilter');
+var gameGrid = document.getElementById('gameGrid');
+var gameCount = document.getElementById('gameCount');
+var genreCount = document.getElementById('genreCount');
+var lastUpdated = document.getElementById('lastUpdated');
+var darkToggle = document.getElementById('darkToggle');
+var toast = document.getElementById('toast');
+var games = GAMES_DATA;
+var genres = {};
+games.forEach(function(g){ if(g.genres) g.genres.forEach(function(gn){ genres[gn]=(genres[gn]||0)+1; }); });
+function getTheme(){ return localStorage.getItem('bga-theme')||'light'; }
+function setTheme(t){ document.documentElement.setAttribute('data-theme',t); localStorage.setItem('bga-theme',t); darkToggle.checked=t==='dark'; }
+setTheme(getTheme());
+darkToggle.addEventListener('change',function(){ setTheme(this.checked?'dark':'light'); });
+function render(){
+var q=searchInput.value.toLowerCase();
+var sort=sortSelect.value;
+var genre=genreFilter.value;
+var filtered=games.filter(function(g){ if(q&&!g.name.toLowerCase().includes(q))return false; if(genre&&(!g.genres||!g.genres.some(function(gn){return gn.toLowerCase()===genre;})))return false; return true; });
+if(sort==='name') filtered.sort(function(a,b){return a.name.localeCompare(b.name);});
+else if(sort==='players') filtered.sort(function(a,b){return (a.players||'').localeCompare(b.players||'');});
+else if(sort==='popularity') filtered.sort(function(a,b){return (b.popularity||0)-(a.popularity||0);});
+else filtered.sort(function(a,b){return a.name.localeCompare(b.name);});
+gameGrid.innerHTML='';
+if(!filtered.length){ gameGrid.innerHTML='<p style="text-align:center;color:var(--fg-muted);padding:2rem;">No games found.</p>'; return; }
+filtered.forEach(function(g){
+var card=document.createElement('div'); card.className='game-card';
+var nameEl=document.createElement('div'); nameEl.className='game-card-name';
+var link=document.createElement('a'); link.href='https://boardgamearena.com'+g.url; link.target='_blank'; link.rel='noopener'; link.textContent=g.name;
+nameEl.appendChild(link); card.appendChild(nameEl);
+var meta=document.createElement('div'); meta.className='game-card-meta';
+if(g.players){ var ps=document.createElement('span'); ps.textContent=g.players+' players'; meta.appendChild(ps); }
+card.appendChild(meta);
+if(g.genres&&g.genres.length){
+var ge=document.createElement('div'); ge.className='game-card-genres';
+g.genres.forEach(function(gn){ var p=document.createElement('span'); p.className='genre-pill'; p.textContent=gn; ge.appendChild(p); });
+card.appendChild(ge);
+}
+if(g.popularity){
+var row=document.createElement('div'); row.className='stat-row';
+row.innerHTML='<span class="stat-label">Popularity</span><div class="stat-bar"><div class="stat-bar-fill" style="width:'+g.popularity+'%"></div></div><span class="stat-value">'+g.popularity+'</span>';
+card.appendChild(row);
+}
+var badge=document.createElement('div'); badge.className='free-badge'; badge.textContent='Free';
+card.appendChild(badge);
+gameGrid.appendChild(card);
+});
+}
+function populateGenreFilter(){
+var v=genreFilter.value;
+genreFilter.innerHTML='<option value="">All Genres</option>';
+Object.keys(genres).sort().forEach(function(gn){ var o=document.createElement('option'); o.value=gn.toLowerCase(); o.textContent=gn+' ('+genres[gn]+')'; genreFilter.appendChild(o); });
+genreFilter.value=v;
+}
+function debounce(fn,ms){ var t; return function(){ clearTimeout(t); t=setTimeout(fn,ms); }; }
+searchInput.addEventListener('input',debounce(render,200));
+sortSelect.addEventListener('change',render);
+genreFilter.addEventListener('change',render);
+populateGenreFilter();
+render();
+})();
+</script>
+</body>
+</html>

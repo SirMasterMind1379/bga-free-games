@@ -1,3 +1,11 @@
+<!--
+  index.html – Main page structure for BGA Free Games Dashboard
+  This is a single-page app. All interaction (search, filter, sort, dark mode)
+  is handled client-side via script.js. No template engine is used — the server
+  serves this static HTML and the JS fills in the dynamic content via fetch().
+  The RSS feed link is declared both as a visible button and as a <link> element
+  for auto-discovery by feed readers.
+-->
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
@@ -5,20 +13,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BGA Free Games</title>
   <link rel="stylesheet" href="/style.css">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="alternate" type="application/rss+xml" title="BGA Free Games - New Additions" href="/rss">
 </head>
 <body>
+  <!-- Header: title, RSS link, dark mode toggle, status bar, update button -->
   <header class="header">
     <div class="header-inner">
       <h1 class="site-title">BGA Free Games</h1>
       <div class="header-actions">
         <a href="/rss" class="rss-link" title="RSS Feed">RSS Feed</a>
+        <!-- Dark mode toggled via checkbox; state persisted in localStorage -->
         <label class="toggle-label">
           <input type="checkbox" id="darkToggle" aria-label="Toggle dark mode">
           <span class="toggle-text">Dark</span>
         </label>
       </div>
     </div>
+    <!-- Status bar populated by script.js on load and after updates -->
     <div class="header-status">
       <span id="gameCount">Loading...</span>
       <span class="sep">|</span>
@@ -30,6 +42,7 @@
   </header>
 
   <main class="main">
+    <!-- Search controls: text search, genre dropdown, sort selector -->
     <div class="search-bar">
       <input type="text" id="searchInput" placeholder="Search free games..." aria-label="Search games">
       <select id="genreFilter" aria-label="Filter by genre">
@@ -42,15 +55,18 @@
       </select>
     </div>
 
+    <!-- Loading/error indicators and the game card grid -->
     <div id="loading" class="loading">Loading games...</div>
     <div id="error" class="error hidden"></div>
     <div id="gameGrid" class="game-grid"></div>
   </main>
 
+  <!-- Footer with disclaimer — we're not affiliated with BGA -->
   <footer class="footer">
     <p>Data sourced from <a href="https://boardgamearena.com" target="_blank" rel="noopener">BoardGameArena</a>. Not affiliated with BGA.</p>
   </footer>
 
+  <!-- Toast notification for update results -->
   <div id="toast" class="toast hidden"></div>
 
   <script src="/script.js"></script>

@@ -1,3 +1,19 @@
+/* style.css – Boxy dark beige/red theme with dark mode support
+ *
+ * Design rationale:
+ * - Boxy aesthetic: border-radius: 0 !important on everything for a sharp,
+ *   no-nonsense look reminiscent of old-school web interfaces.
+ * - Color palette: Dark beige (#D4C5A0) background with royal red (#B22222)
+ *   and burgundy (#800020) accents. The dark variant inverts the background
+ *   to near-black while keeping the red accents for consistency.
+ * - Typography: Georgia serif for headings (authoritative, classic feel),
+ *   system / Segoe UI sans-serif for body text (readability).
+ * - All colors are defined as CSS custom properties so the dark mode toggle
+ *   only needs to switch the data-theme attribute on <html>.
+ * - The .game-card uses a subtle border + hover shadow effect instead of
+ *   rounding corners, maintaining the boxy constraint.
+ */
+
 *, *::before, *::after {
   box-sizing: border-box;
   border-radius: 0 !important;
@@ -5,6 +21,7 @@
   padding: 0;
 }
 
+/* Light theme (default) – warm beige background, red accents */
 :root {
   --bg: #D4C5A0;
   --bg-alt: #C8B894;
@@ -38,6 +55,9 @@
   --genre-pill-border: #B0A080;
 }
 
+/* Dark theme overrides – switch via [data-theme="dark"] on <html>          */
+/* Backgrounds go near-black, red accents shift slightly brighter for       */
+/* contrast against the dark backdrop. All other properties stay the same.  */
 [data-theme="dark"] {
   --bg: #1A1510;
   --bg-alt: #241E16;

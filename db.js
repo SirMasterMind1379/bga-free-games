@@ -1,3 +1,22 @@
+/**
+ * db.js – JSON file-based database for game data
+ *
+ * Uses a flat JSON file (games.json) as the persistent store rather than
+ * a full database. Rationale:
+ * - The data set is small (~80 games) and read-heavy.
+ * - The sync API is safe because writes are infrequent (once per 60s max)
+ *   and there's only one server process.
+ * - Zero external dependencies — no SQLite, no MongoDB.
+ *
+ * The schema stored in games.json:
+ *   { games: Game[], lastUpdated: ISO-8601|null, updateCount: number }
+ * Each Game object has { id?, name, url, players, genres[], popularity,
+ *   isPremium, discoveredAt, image?, complexity? }
+ *
+ * The upsertGames() function is the only write path — it preserves the
+ * discoveredAt timestamp for existing games (so RSS doesn't re-notify).
+ */
+
 const fs = require('fs');
 const path = require('path');
 
@@ -38,6 +57,9 @@ function getGameByUrl(url) {
   return read().games.find(g => g.url === url) || null;
 }
 
+// Insert or update games. New games get a discoveredAt timestamp;
+// existing games keep their original timestamp so the RSS feed
+// only shows genuinely new discoveries, not re-scrapes.
 function upsertGames(newGames) {
   const data = read();
   const now = new Date().toISOString();
@@ -68,6 +90,7 @@ function getNewGames(since) {
     .sort((a, b) => new Date(b.discoveredAt) - new Date(a.discoveredAt));
 }
 
+// Returns metadata: counts, genre variety, update timestamp, top 5 popular.
 function getStats() {
   const data = read();
   const free = data.games.filter(g => !g.isPremium);
